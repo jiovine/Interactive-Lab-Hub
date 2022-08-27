@@ -65,15 +65,18 @@ _Players:_ Who is involved in the interaction? Who else is there? If you reflect
 
 _Activity:_ What is happening between the actors?
 
-_Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge). 
+_Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge).
 
 The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 
-\*\***Describe your setting, players, activity and goals here.**\*\*
+**The interaction is happening in a person's apartment, specifically in their room when they are sitting at their desk. The person sitting at the desk is listening to music (with headphones or out loud) and has a hard time hearing anything outside of their room. The interaction would occur when another person knocks on the door of person 1's apartment and they are unable to hear the knock. The device will be placed on the desk of the person inside the apartment and when a knock is registered on the apartment door (through vibration) the device blinks to notify the person at the desk. 
+The people involved in the interaction is the person sitting at the desk listening to music and the other person knocking on the apartment door. Anyone else can be inside the apartment (roommates and guests) and it should not interfere with the device interaction. 
+The person knocking on the apartment door wants the attention of the person working at their desk. Due to the loud music the person studying is listening to, they can not hear the knock. When a knock is registered the device will blink either green or red, representing the intensity of the knock. 
+The goal for the person knocking is to get the attention of the person inside. When the person at the desk sees the device blink, they know that someone is knocking on their door and they will go answer the door.**
 
 Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
 
-\*\***Include pictures of your storyboards here**\*\*
+![Storyboard](storyboard.pdf)
 
 Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
 
