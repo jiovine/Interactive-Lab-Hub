@@ -71,7 +71,7 @@ The interactive device can be anything *except* a computer, a tablet computer or
 
 **The interaction is happening in a person's apartment, specifically in their room when they are sitting at their desk. The person sitting at the desk is listening to music (with headphones or out loud) and has a hard time hearing anything outside of their room. The interaction would occur when another person knocks on the door of person 1's apartment and they are unable to hear the knock. The device will be placed on the desk of the person inside the apartment and when a knock is registered on the apartment door (through vibration) the device blinks to notify the person at the desk. 
 The people involved in the interaction is the person sitting at the desk listening to music and the other person knocking on the apartment door. Anyone else can be inside the apartment (roommates and guests) and it should not interfere with the device interaction. 
-The person knocking on the apartment door wants the attention of the person working at their desk. Due to the loud music the person studying is listening to, they can not hear the knock. When a knock is registered the device will blink either green or red, representing the intensity of the knock. 
+The person knocking on the apartment door wants the attention of the person working at their desk. Due to the loud music the person studying is listening to, they can not hear the knock. The color of the light can be green for soft knocks and red for my intense knocks.
 The goal for the person knocking is to get the attention of the person inside. When the person at the desk sees the device blink, they know that someone is knocking on their door and they will go answer the door.**
 
 Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
@@ -113,10 +113,13 @@ Take a little time to set up the wizarding set-up that allows for someone to rem
 
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
+https://user-images.githubusercontent.com/109994863/187331812-a26fac90-67c2-457b-bd93-f70b22ce70d7.MOV
+
 Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
 
 \*\***Show the follow-up work here.**\*\*
 
+![Updated Sketch](updated_sketch.png)
 
 ## Part E. Costume the device
 
