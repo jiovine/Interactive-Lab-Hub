@@ -120,6 +120,7 @@ Now, hange the goal within the same setting, and update the interaction with the
 \*\***Show the follow-up work here.**\*\*
 
 ![Updated Sketch](updated_sketch.png)
+**I like the idea of being able to use multiple colors for different things. Instead of for soft or hard knocks it can be used to differentiate between a knock at my bedroom door or a knock at my apartment door.**
 
 ## Part E. Costume the device
 
