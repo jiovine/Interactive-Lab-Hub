@@ -119,7 +119,6 @@ Now, hange the goal within the same setting, and update the interaction with the
 
 \*\***Show the follow-up work here.**\*\*
 
-![Updated Sketch](updated_sketch.png)
 **I like the idea of being able to use multiple colors for different things. Instead of for soft or hard knocks it can be used to differentiate between a knock at my bedroom door or a knock at my apartment door.**
 
 ## Part E. Costume the device
@@ -129,13 +128,15 @@ Only now should you start worrying about what the device should look like. Devel
 Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
 
 \*\***Include sketches of what your devices might look like here.**\*\*
-
+![Updated Sketch](updated_sketch.png)
 \*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
-
+**Being able to blend in with the environment. At first I imagined a little picture frame that was an LED screen (mostly because my phone can mimic that easily) but I like the idea of using a lamp or desk light better since it doesn't look out of the ordinary**
 
 ## Part F. Record
 
 \*\***Take a video of your prototyped interaction.**\*\*
+
+https://user-images.githubusercontent.com/109994863/187335942-c530524e-e9df-4e12-b2fe-b0e1e6b9321d.mp4
 
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\*
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
