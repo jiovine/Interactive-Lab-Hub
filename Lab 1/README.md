@@ -185,14 +185,10 @@ With the iteration that involves notifying a caregiver, it would be annoying to 
 
 
 ## Part D. Wizard the device
-Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
+The light from my phone did not shine through my lamp shade the way I would've liked, so I opted for using a light switch behind the scenes.
+https://user-images.githubusercontent.com/109994863/188531450-46c03742-ec49-460a-a7c4-76666b43bbb6.mov
 
-\*\***Include your first attempts at recording the set-up video here.**\*\*
 
-
-Now, change the goal within the same setting, and update the interaction with the paper prototype. 
-
-\*\***Show the follow-up work here.**\*\*
 
 
 ## Part E. Costume the device
@@ -200,9 +196,9 @@ Now, change the goal within the same setting, and update the interaction with th
 ![Costume](costume.jpeg)
 
 ## Part F. Record
+https://user-images.githubusercontent.com/109994863/188530660-0fc7ad2e-b00a-4ca6-8f8b-147ac362d6fb.mp4
 
-\*\***Take a video of your prototyped interaction.**\*\*
 
 
-\*\***Please indicate anyone you collaborated with on this Lab.**\*\*
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+
+Thank you to might roommate Zach for starring in my video!
