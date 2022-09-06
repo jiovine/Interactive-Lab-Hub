@@ -166,49 +166,22 @@ Do last week’s assignment again, but this time:
 
 ## Part A. Plan 
 
-To stage an interaction with your interactive device, think about:
-
-_Setting:_ Where is this interaction happening? (e.g., a jungle, the kitchen) When is it happening?
-
-_Players:_ Who is involved in the interaction? Who else is there? If you reflect on the design of current day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
-
-_Activity:_ What is happening between the actors?
-
-_Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge).
-
-The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
-
-
-Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
+My initial idea was to automatically turn on the light when a person wakes up in the middle of the night. It would take place in the bedroom and the only person involved would be the person sleeping. The person would go to stand up and next to their bed would be a pressure sensing mat that would turn on the lights when a certain weight threshold is detected. They would then be free to do whatever they want until the mat is activated again and would then proceed to turn off the lights. I narrowed this idea to focus on older adults with cognitive issues and or physical disabilities. This could occur in their own home or in a nursing facility. Some of the ideas in my storyboard include: a robot that brings them their cane/walker, the ability to have two-way communication with a trusted individual, and even and emergency services button.
 
 ![Storyboard](storyboard_part2.jpeg)
-
-Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
-
-\*\***Summarize feedback you got here.**\*\*
 
 
 ## Part B. Act out the Interaction
 
-Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
+Depending on the setup of the individuals room, accessibility can be an issue. I do not have much space in between my bed and closet so for an older adult who uses a cane, the robot could block their only exit point from their room.
 
-\*\***Are there things that seemed better on paper than acted out?**\*\*
-
-\*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
-
+If the user is using the feature that plays calming sounds, having the ability to turn it off immediately will definitely be useful instead of strictly being on a timer or waiting for the user to fall asleep. 
+With the iteration that involves notifying a caregiver, it would be annoying to have woken them up if the user was only using the restroom or getting a drink of water. So adding a feature that would explicitly require the user to call the caregiver can be helpful.
 
 
 ## Part C. Prototype the device
 
-You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smart phone to act as a “light” and use a remote control interface to remotely change the light on that device. 
-
-Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
-
-We invented this tool for this lab! 
-
-If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
-
-\*\***Give us feedback on Tinkerbelle.**\*\*
+![Prototype](prototype_lab1.jpeg)
 
 
 ## Part D. Wizard the device
