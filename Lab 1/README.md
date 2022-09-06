@@ -186,7 +186,10 @@ With the iteration that involves notifying a caregiver, it would be annoying to 
 
 ## Part D. Wizard the device
 The light from my phone did not shine through my lamp shade the way I would've liked, so I opted for using a light switch behind the scenes.
-https://user-images.githubusercontent.com/109994863/188531450-46c03742-ec49-460a-a7c4-76666b43bbb6.mov
+
+https://user-images.githubusercontent.com/109994863/188531651-3a01f2b6-6176-4f26-86ec-a6793e6e0c05.mov
+
+
 
 
 
