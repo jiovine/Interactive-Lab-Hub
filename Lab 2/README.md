@@ -186,7 +186,7 @@ Can you make time interactive? You can look in `screen_test.py` for examples for
 
 Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www.billverplank.com/IxDSketchBook.pdf)!
 
-![Sketch Idea](dolphins.png)
+![Sketch Idea](dolphins_sketch.png)
 
 **We strongly discourage and will reject the results of literal digital or analog clock display.**
 
@@ -207,7 +207,7 @@ After that, Git will ask you to login to your GitHub account to push the updates
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
 
-https://user-images.githubusercontent.com/109994863/189698203-25f1f202-5e05-40ad-aa98-55d5ec129b6c.mov
+![Clock](lab2clock.mov)
 
 
 ## Part G. 
