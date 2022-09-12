@@ -184,9 +184,9 @@ Does time have to be linear?  How do you measure a year? [In daylights? In midni
 
 Can you make time interactive? You can look in `screen_test.py` for examples for how to use the buttons.
 
-Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www.billverplank.com/IxDSketchBook.pdf)!
+Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www.billverplank.com/IxDSketchBook.pdf)!)
 
-![Sketch Idea](dolphins_sketch.png)
+![Sketch Idea](lab2_sketch.png)
 
 **We strongly discourage and will reject the results of literal digital or analog clock display.**
 
@@ -207,12 +207,13 @@ After that, Git will ask you to login to your GitHub account to push the updates
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
 
-![Clock](lab2clock.mov)
+[Video of clock](https://drive.google.com/drive/u/0/my-drive)
 
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
-
+Some changes that I'd like to make is to have it be automated at finding the next game and updating the records of each team every week. A webscraper should be able to accomplish this. In addition I would like to have the logo of the team they are playing that week in the bottom right instead of the nfl logo. Another feature that I think is feasible is to have the bottom button be used to cycle through each week of the season and give the countdown to those, or if they already occured show the final score by pressing the top button and cycling through previous games. The record can be switched to being displayed when both buttons are pressed. 
+![Updated sketch](lab2_updated.jpg)
 
 # Prep for Part 2
 
