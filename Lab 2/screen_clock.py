@@ -33,8 +33,8 @@ disp = st7789.ST7789(
 )
 
 #My images
-image1 = Image.open("dolphins.png")
-image2 = Image.open("nfl.png")
+image1 = Image.open("teams/dolphins.png")
+image2 = Image.open("teams/ravens.png")
 
 # Create blank image for drawing.
 # Make sure to create image with mode 'RGB' for full color.
@@ -117,7 +117,7 @@ while True:
     x=0
     y=0
     title=['GAMEDAY', 'COUNTDOWN']
-    disp.image(image1, x=5, y=5)
+    disp.image(image1, x=5, y=5,)
     disp.image(image2, x=70, y=0)
     time = curHour+':'+curMinute+':'+curSecond
     draw.text((81-(font.getsize(title[0])[0]//2), 10), text=title[0], font=font, fill=(255,133,0,255))
