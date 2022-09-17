@@ -231,6 +231,9 @@ Modify the code from last week's lab to make a new visual interface for your new
 
 As always, make sure you document contributions and ideas from others explicitly in your writeup.
 
+Updated the clock to include all teams, can view countdown to next game by pressing top button and go back a week by pressing the button. Pressing both buttons shows the divisional standings.
+[Video of clock](https://drive.google.com/file/d/12n3WR6nR1SC6HBkyk7MPqE7QKNxZdRbE/view?usp=sharing)
+
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
 
 
