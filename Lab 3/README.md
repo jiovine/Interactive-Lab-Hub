@@ -56,6 +56,9 @@ Now, you might wonder what exactly is a `.sh` file? Typically, a `.sh` file is a
 You can also play audio files directly with `aplay filename`. Try typing `aplay lookdave.wav`.
 
 \*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
+
+In text2speech/greeting.sh
+
 (This shell file should be saved to your own repo for this lab.)
 
 Bonus: If this topic is very exciting to you, you can try out this new TTS system we recently learned about: https://github.com/rhasspy/larynx
@@ -81,6 +84,8 @@ Then try `./vosk_demo_mic.sh`
 
 \*\***Write your own shell file that verbally asks for a numerical based input (such as a phone number, zipcode, number of pets, etc) and records the answer the respondent provides.**\*\*
 
+In speech2text/zipcode.sh
+
 ### Serving Pages
 
 In Lab 1, we served a webpage with flask. In this lab, you may find it useful to serve a webpage for the controller on a remote device. Here is a simple example of a webserver.
@@ -105,9 +110,14 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 \*\***Post your storyboard and diagram here.**\*\*
 
+My speech-enabled device is a simple mental math game. The device is started with the click of a button and prompts the user with an arithmetic question, if the user gets it right their score goes up and they get to answer another question. If they get it wrong the round ends and the device lets the user know their score.
+![Lab3 Idea](lab3storyboard.jpeg)
+
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
 
 \*\***Please describe and document your process.**\*\*
+
+I imagine the dialogue to be very transactional. The device prompts the user with a math question and if the user gives the correct answer, the device gives a few words of encouragement and then goes straight into the next question. This cycle continues until the user gets a question wrong and the device will let the user know that it was wrong and how many they have answered correctly in that round.
 
 ### Acting out the dialogue
 
@@ -115,10 +125,13 @@ Find a partner, and *without sharing the script with your partner* try out the d
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
 
+[Video of Interaction.](https://drive.google.com/file/d/1kIuYyaoNEdOTw8ed-PBSLnhpHlMjkB-j/view?usp=sharing)
+
 ### Wizarding with the Pi (optional)
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
 
 \*\***Describe if the dialogue seemed different than what you imagined, or when acted out, when it was wizarded, and how.**\*\*
+
 
 # Lab 3 Part 2
 
