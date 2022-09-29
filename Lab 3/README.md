@@ -140,7 +140,18 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings...
+
+There are a couple of things that I definitely think I could improve upon for the design of my device. First of all, the scenario in which the interaction occurs was very vague in the original video and storyboarding. I would like the interaction with the device to occur spontaneously (like the 1D joystick game outside of the Tata collaboratory space). The user sees something intriguing set up with an inviting phrase on it that makes them want to interact. I would like the interaction to be as simple as possible, the user should be able to go up to the device, press one button and begin to play the game. So to summarize the user interaction with my device:
+* Set up as an interactive game  
+
+* Occur spontaneously in an environment with lots of foot traffic (eg Tata space or Master's Studio)  
+
+* Simple and transactional: press a button to play, don't need any instructions
+
 2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
+
+An idea that I would like to implement would be a player vs player mode. This will involve two buttons and a _Family Feud_ styled gameplay where a math question is prompted and the first person to press their respective button gets to answer it. The score would be kept and a winner would be declared to encourage competition and therefore interaction.
+
 3. Make a new storyboard, diagram and/or script based on these reflections.
 
 ## Prototype your system
