@@ -153,6 +153,7 @@ There are a couple of things that I definitely think I could improve upon for th
 An idea that I would like to implement would be a player vs player mode. This will involve two buttons and a _Family Feud_ styled gameplay where a math question is prompted and the first person to press their respective button gets to answer it. The score would be kept and a winner would be declared to encourage competition and therefore interaction.
 
 3. Make a new storyboard, diagram and/or script based on these reflections.
+![Lab3 Idea Updated](lab3part2storyboard.jpeg)
 
 ## Prototype your system
 
