@@ -29,11 +29,17 @@ def speak(s):
     return output
 
 # asks a random math question
-def ask_question(p1, p2):
-    n, m = random.randrange(2, 40), random.randrange(2, 10)
+def ask_question(p1, p2, count):
+    if count == 3:
+        speak('Final score.. Player 1 {}... Player 2 {}... Thank you for playing... Press either button to play again.'.format(p1, p2))
+        start()
+    elif count == 2:
+        speak('Final Question...')
+    n, m = random.randrange(2, 10), random.randrange(2, 10)
     s = 'What is {} times {}'.format(n, m)
     speak(s)
-    check_answer(n*m, p1, p2)
+    count+=1
+    check_answer(n*m, p1, p2, count)
 
 # gets the first number said by the user trying to answer the question, ignores any speech that isn't a number
 def get_int_answer():
@@ -49,7 +55,8 @@ def get_int_answer():
         raise RuntimeError("API unavailable")
     except sr.UnknownValueError:
         # speech was incoherent or nothing was said
-        raise RuntimeError("Nothing was said")
+        speak('I am sorry something went wrong, please press a button to play again.')
+        start()
     
     # pulling the last integer said
     num = None
@@ -64,27 +71,31 @@ def get_int_answer():
     return num
 
 # checks who pressed button first and if they get it correct properly adjusts the score
-def check_answer(ans, p1, p2):
+def check_answer(ans, p1, p2, count):
     if button_press() == 1:
         speak('Player 1')
         if ans == get_int_answer():
             speak('Correct.')
             p1+=1
-            ask_question(p1, p2)
+            ask_question(p1, p2, count)
         else:
             speak('I am sorry that is incorrect.')
-            speak('Final score.. Player 1 {}... Player 2 {}... Thank you for playing... Press either button to play again.'.format(p1, p2))
-            start()
+            #speak('Final score.. Player 1 {}... Player 2 {}... Thank you for playing... Press either button to play again.'.format(p1, p2))
+            #start()
+            p1-=1
+            ask_question(p1, p2, count)
     else:
         speak('Player 2')
         if ans == get_int_answer():
             speak('Correct.')
             p2+=1
-            ask_question(p1, p2)
+            ask_question(p1, p2, count)
         else:
             speak('I am sorry that is incorrect.')
-            speak('Final score.. Player 1 {}... Player 2 {}... Thank you for playing... Press either button to play again.'.format(p1, p2))
-            start()
+            #speak('Final score.. Player 1 {}... Player 2 {}... Thank you for playing... Press either button to play again.'.format(p1, p2))
+            #start()
+            p2-=1
+            ask_question(p1, p2, count)
 
 
 # idle/start state of the game
@@ -92,6 +103,7 @@ def start():
     t = button_press()
     if t >= 0:
         speak('Welcome, lets begin.')
-        ask_question(p1=0, p2=0)
+        ask_question(p1=0, p2=0, count=0)
 
+speak('Press any button to begin')
 start()

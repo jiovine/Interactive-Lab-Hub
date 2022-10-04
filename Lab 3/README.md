@@ -164,7 +164,13 @@ The system should:
 
 *Document how the system works*
 
+The system has two ways that the users interact with the device: the microphone and the buttons. On startup, the device prompts the user to press either button to start, and then the game begins. The device asks a random multiplication question and whoever presses their respective button first gets to answer the question. If the user gets it correct, their respective score is incremented by one, but if they get it wrong their score is decreased by one. There are a total of 10 (or 3 for the purpose of the video) questions and after the tenth question the device will tell the users the game is over and tell them the final score, it then prompts them to press either button to play again.
+
 *Include videos or screencaptures of both the system and the controller.*
+
+My device worked on its own, so I did not opt to use the controller/wizarding.
+
+[Video of a game between two users.](https://drive.google.com/file/d/1YK69hE4jI7ZQmN57-owkZDVUpz9nLWn0/view?usp=sharing)
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
@@ -172,18 +178,18 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+
+What worked well was that the users were very into the game. The competition aspect made the users want to play and we even continued to play after filming. Although the slow response time to button presses and voice commands were very evident (especially in testing) it added another aspect to the game because the users found it funny when the device would mess up or hear them incorrectly.
 
 ### What worked well about the controller and what didn't?
 
-\*\**your answer here*\*\*
+The slow response times and subpar voice recognition of the device made playing a good game a little difficult. The users were a little _too_ into it and therefore they would press the button way too early for the device to recognize it. Same thing for the speech recognition. They would shout the number too fast and the device wouldn't be able to pick up on it. Other then that the device did work as intended.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-\*\**your answer here*\*\*
-
+I think in the design I could have made the device listen more actively so that I didn't have to create a microphone object every iteration. This would involve some multithreading, but I do believe it is achievable. The same goes for the buttons. It was single threaded so player 1 did have a slight advantage in response time.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-\*\**your answer here*\*\*
+I can use the voice interaction to create a dataset for the users. Besides that I can also add a motion detector to prompt users to use the device when they walk by.
 
