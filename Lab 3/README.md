@@ -166,6 +166,8 @@ The system should:
 
 The system has two ways that the users interact with the device: the microphone and the buttons. On startup, the device prompts the user to press either button to start, and then the game begins. The device asks a random multiplication question and whoever presses their respective button first gets to answer the question. If the user gets it correct, their respective score is incremented by one, but if they get it wrong their score is decreased by one. There are a total of 10 (or 3 for the purpose of the video) questions and after the tenth question the device will tell the users the game is over and tell them the final score, it then prompts them to press either button to play again.
 
+All of the code is included in _math_game.py_
+
 *Include videos or screencaptures of both the system and the controller.*
 
 My device worked on its own, so I did not opt to use the controller/wizarding.
