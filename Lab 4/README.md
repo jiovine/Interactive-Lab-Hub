@@ -244,6 +244,8 @@ Build a cardbord prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
 
+![Lab 4 Prototype](lab4_prototype.png)
+
 
 LAB PART 2
 
