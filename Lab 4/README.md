@@ -175,10 +175,15 @@ You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_VL53L
 Usually, sensors need to positioned in specific locations or orientations to make them useful for their application. Now that you've tried a bunch of the sensors, pick one that you would like to use, and an application where you use the output of that sensor for an interaction. For example, you can use a distance sensor to measure someone's height if you position it overhead and get them to stand under it.
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
+![Lab 4 Ideas](lab4_ideas.jpeg)
 
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
+A major design question I have is what will the interaction look like? I have a general idea of how I want each device to work but the form factor that I should make these prototypes is something that remains uncertain. This matters because a lot of these devices can be prototyped as either a handheld or standalone device. If it is the former then the device's ergonomics come into play, and if it's the latter the design and aesthetic matters much more. I think prototyping one version of each can help answer that question.
+
 **\*\*\*Pick one of these designs to prototype.\*\*\***
+
+I went along with the virtual vinyl album player to prototype.
 
 
 ### Part D
@@ -221,11 +226,19 @@ Think about how you want to present the information about what your sensor is se
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
 
+![Lab 4 Design sketches](lab4_sketches.jpeg)
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+
+As mentioned before, I was stuck between two types of designs: a handheld/portable device or a standalone device. The sensors I am using are not affected by their positioning (in terms of performance) so their placement will be purely aesthetic and interaction oriented. In addition, the OLED screens are not very big so the amount of information that I can display on it and still be legible is something that I need to take into consideration. When actually programming the device I can mess around with the information displayed and get some peer feedback on what looks the best.
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
+I am going with device design 2.
+
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+
+I went with this design for two reasons: I believe it will work better as a standalone device and that the simplicity of this device is altered when I include a second screen. I've always enjoyed little pieces of technology that have one specific purpose and wanted to build something similar to the Spotify Car Thing (yes, that is its real name) but for inside your home or on your desk.
 
 Build a cardbord prototype of your design.
 
