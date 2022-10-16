@@ -287,6 +287,24 @@ We encourage you to try using these controls, **while** paying particular attent
 
 Document all the prototypes and iterations you have designed and worked on! Again, deliverables for this lab are writings, sketches, photos, and videos that show what your prototype:
 * "Looks like": shows how the device should look, feel, sit, weigh, etc.
+
+I made some changes on the look and functionality of my device from part 1. Focusing on the look in this part, I opted for a more portable/slim design. I had a vision of it working like a mini-jukebox that connects to bluetooth speakers and offers very simple features: play/pause, next track and volume. I decided to change the rotary encoder from an audio scrubber to volume knob after some trial and error with the former and not being satisfied with the result. In addition I would've liked the screen to display the album art, but the spotify API that I was using did not allow an easy way to get album art and the OLED screen was also too small to display something of great detail. Therefore I made it to just display the current track ID and the artist.
+
+![Lab 4 Changes](lab4updated.jpeg)
+![Lab 4 Design](look1.jpg)
+![Lab 4 Design](look2.jpg)
+
 * "Works like": shows what the device can do
+
+The device works like a mini-jukebox. It can connect to any bluetooth speaker and player music from any spotify playlist (assuming you have a premium account). The original idea was to make it play one specific album and you would be able to scrub through it using the rotary encoder, but I changed it to a volume knob and the user can now play songs from any playlist, artist or album.
+
+The device has three main ways of interaction, a play/pause button, a next track button, and a volume knob. This is accompanied by the OLED screen which allows the user to see what track is being played and the artist.
+
+[Device in action.](https://drive.google.com/file/d/16NHuSeZNpu38VG7AxCfz5M5QHQjwsyp5/view?usp=sharing)
+
+
 * "Acts like": shows how a person would interact with the device
 
+I enjoy having a dedicated device for my music with physical buttons and I imagine that I am not alone in that feeling. I picture the device being left on a coffee table or desk so that whenever you want to just quickly play music you can press the next track button and it will randomly choose a song from your spotify library. This takes away the process of having to connect your phone to a bluetooth speaker and then having the dreaded task of selecting a song from your 2000 track playlist. You can keep it next to you when doing a task too and have the ability to quickly change songs or pause the music.
+
+[Interaction with the device.](https://drive.google.com/file/d/1Z__c1IWpO05DG4pMlAGyhlRE034f9G-5/view?usp=sharing)
