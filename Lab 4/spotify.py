@@ -25,10 +25,7 @@ oled.clear(oled.PAGE)
 
 
 # spotify credentials
-devices = {'iphone':'fb28f830b5a710a6b6c42fc090b0deaf671ad287', 'macbook':'b02fe9efab907100102cb3f9c9cce0c723e6e4c0'}
-DEVICE_ID=devices['macbook']
-CLIENT_ID="52487af046974ab39977ea825c1baa2a"
-CLIENT_SECRET="710facf1ad434d4da63f09822bdf17b4"
+"""My credentials for spotify go here, for privacy reasons I removed them for github"""
 
 # Spotify Authentication
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
