@@ -37,7 +37,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
 # Transfer playback to the Raspberry Pi if music is playing on a different device
 # or force start it on that device if there is no music playing
 playlists = {'brett': 'spotify:playlist:6VChS0ZQoRSOWTNsP7TgLZ', 'feel good':'spotify:playlist:5xGQTmhIGvBeaPCVUtKTZB'}
-sp.start_playback(device_id=DEVICE_ID, context_uri=playlists['feel good'])
+sp.start_playback(device_id=DEVICE_ID, context_uri=playlists['brett'])
 sp.shuffle(True, device_id=DEVICE_ID)
 cur = sp.current_playback()
 track_id = cur['item']['name']
