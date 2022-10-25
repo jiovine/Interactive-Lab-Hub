@@ -102,6 +102,24 @@ pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 
 **\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.\*\*\***
 
+## Contours
+![Contours](contour.png)
+Contour mapping can be used to aide in digital sketches/art.
+
+## Face Detection
+![Face detection](face.png)
+Face detection can be used for tracking remote workers, see how much time they spend in front of their computer every day.
+
+## Flow detection
+![Flow detection](optical.png)
+Flow detection can be used for tracking traffic patterns or when a highway is very busy.
+
+## Object detection
+![Object detection](object.png)
+Object detection can be used for self-driving cars and other autonomous vehicles.
+
+
+
 #### Filtering, FFTs, and Time Series data. 
 Additional filtering and analysis can be done on the sensors that were provided in the kit. For example, running a Fast Fourier Transform over the IMU or Microphone data stream could create a simple activity classifier between walking, running, and standing.
 
@@ -139,6 +157,10 @@ For technical references:
 
 
 **\*\*\*Include links to your code here, and put the code for these in your repo--they will come in handy later.\*\*\***
+
+Threshold detection inside of ExampleAudioFFT.py
+![Threshold detection](threshold.png)
+
 
 ### (Optional Reading) Introducing Additional Concepts
 The following sections ([MediaPipe](#mediapipe) and [Teachable Machines](#teachable-machines)) are included for your own optional learning. **The associated scripts will not work on Fall 2022's Pis, so you can move onto part B.** However, you are welcome to try it on your personal computer. 
@@ -229,6 +251,12 @@ This might take a while to get fully installed. After installation, connect your
 
 **\*\*\*Describe and detail the interaction, as well as your experimentation here.\*\*\***
 
+
+For my interaction I created a simple bot that would detect if a person is sitting in front of their computer or not. My idea behind this is that school teachers can track if students are actually in front of their screens for zoom lectures or companies can make sure employees are actually attending meetings/ sitting in front of their computer for a reasonable amount of time. I tested it out with 0, 1 and 2 faces in the picture and it worked as expected.
+
+![Student is present](student_present.png)
+![Student is not present](student_not.png)
+
 ### Part C
 ### Test the interaction prototype
 
@@ -245,6 +273,16 @@ For example:
 1. How could change your interactive system to address this?
 1. Are there optimizations you can try to do on your sense-making algorithm.
 
+#### Observations
+* The device worked very well when the user is looking at the screen or in its general direction.
+* The system had issues when the user would turn their head 90 degrees to the left or right as it would not be able to recognize a face and would mark the user as not present.
+* In a more complete system I could have it recognize the sides of peoples faces and therefore not incorrectly mark the user as not present.
+
+#### System usage
+* There is no reason that the user should be aware of the uncertainties, which I think is a positive. The idea of having this system in place at all will make users more relucant to leave for extended periods of time.
+* A miss classification is one area that could be an issue. Students or employees who were genuinely sitting in front of the computer but might have their camera in an awkard spot (if on a desktop) can be effected very negatively. This could lead to them looking bad in front of their teacher or boss.
+* As said above I could fix this by having face recognition work on the sides of faces as well.
+
 ### Part D
 ### Characterize your own Observant system
 
@@ -259,6 +297,8 @@ During the lecture, we mentioned questions to help characterize a material:
 * How does X feel?
 
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
+
+[Video of interaction](https://drive.google.com/file/d/1IWxFKD25-wwyu2KkpMSTG5iT0tvRWXsC/view?usp=sharing)
 
 ### Part 2.
 

@@ -18,8 +18,11 @@ UPDATE_INTERVAL = 1.0
 
 ### Things you probably don't need to change
 FORMAT=np.float32
-SAMPLING_RATE = 44100
+SAMPLING_RATE = 16000
 CHANNELS=1
+
+# threshold detection
+threshold = 500
 
 
 def main():
@@ -97,9 +100,14 @@ def main():
 
                 LoudestFrequency = frequencies[amplitudes.argmax()]
                 
-                print("Loudest Frqeuncy:",LoudestFrequency)
+                '''print("Loudest Frqeuncy:",LoudestFrequency)
                 print("RMS volume:",volumneSlow)
-                print("Volume Change:",volumechange)
+                print("Volume Change:",volumechange)'''
+
+                if volumneSlow > threshold:
+                    print("TOO LOUD")
+                else:
+                    print("good")
                 
                 nextTimeStamp = UPDATE_INTERVAL+time.time() # See `UPDATE_INTERVAL` above
 
