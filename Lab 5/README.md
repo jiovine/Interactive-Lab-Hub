@@ -305,3 +305,7 @@ During the lecture, we mentioned questions to help characterize a material:
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
 
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
+
+The original system was not able to detect the sides of faces, so I added profile detection to the model so that it would not mark the user as not present when they were looking off to the side. This also gave me the idea that this can be used for proctoring online exams. Now that the model can detect side profiles, it can also detect if the user is looking at the screen or not by seeing if their head is turned. Therefore I added a third state on top of "Student is present" and "Student is not present" that outputs "Student is present but not looking at the screen." If the user spends a large portion of their time looking away from the screen while taking an online test, then it can be inferred that they might be cheating.
+
+[Interaction example.](https://drive.google.com/file/d/109iyhA94woo3YJX2U8O7tnzqjXpnm6vG/view?usp=sharing)
