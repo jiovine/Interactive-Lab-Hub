@@ -16,7 +16,7 @@ client.connect(
 
 topic = 'IDD/your/topic/here'
 
-i2c = busio.I2C(board.SCL, board.SDA)
+i2c = busio.I2C(board.SDA, board.SCL)
 
 mpr121 = adafruit_mpr121.MPR121(i2c)
 
