@@ -15,5 +15,5 @@ Please place links here to the README.md's for each of your labs here:
 
 [Lab 6. Little Interactions Everywhere](Lab%206/)
 
-[Final Project](https://github.com/jiovine/Interactive-Lab-Hub/blob/Fall2022/Final%20Project/README.md)
+[Final Project](https://github.com/jiovine/Interactive-Lab-Hub/tree/Fall2022/Final%20Project)
 
