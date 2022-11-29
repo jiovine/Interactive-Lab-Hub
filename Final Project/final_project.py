@@ -1,9 +1,22 @@
+from mfrc522 import SimpleMFRC522
+import RPi.GPIO as GPIO
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from time import sleep
-import sys
 import re
+import album_list
+from adafruit_servokit import ServoKit
 
+# Set channels to the number of servo channels on your kit.
+# There are 16 channels on the PCA9685 chip.
+kit = ServoKit(channels=16)
+
+# Name and set up the servo according to the channel you are using.
+servo = kit.continuous_servo[0]
+
+# Set the pulse width range of your servo for PWM control of rotating 0-180 degree (min_pulse, max_pulse)
+# Each servo might be different, you can normally find this information in the servo datasheet
+servo.set_pulse_width_range(10, 0)
 
 # spotify credentials
 """My credentials for spotify go here, for privacy reasons I removed them for github"""
@@ -14,15 +27,27 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
                                                 redirect_uri="http://localhost:8080",
                                                 scope="user-read-playback-state,user-modify-playback-state"))
 
-
-# Transfer playback to the Raspberry Pi if music is playing on a different device
-# or force start it on that device if there is no music playing
-playlists = {'brett': 'spotify:playlist:6VChS0ZQoRSOWTNsP7TgLZ', 'feel good':'spotify:playlist:5xGQTmhIGvBeaPCVUtKTZB'}
-sp.start_playback(device_id=DEVICE_ID, context_uri=playlists['brett'])
-sp.shuffle(True, device_id=DEVICE_ID)
-cur = sp.current_playback()
-track_id = cur['item']['name']
-track_id = re.sub(r'[^\x00-\x7f]', "", track_id)
-artist = cur['item']['artists'][0]['name']
-artist = re.sub(r'[^\x00-\x7f]', "", artist)
-print("{} by {}".format(track_id, artist))
+reader=SimpleMFRC522()
+sp.shuffle(False, device_id=DEVICE_ID)
+        
+# infinite loop waiting for RFID scan
+while True:
+    id= reader.read()[0]
+    status = album_list.get_album(id)
+    sleep(.5)
+    print(bool(status))
+    if status:
+        servo.throttle = 0
+        sleep(0.25)
+        sp.start_playback(device_id=DEVICE_ID, context_uri=status)
+        sleep(.5)
+        cur = sp.current_playback()
+        artist = cur['item']['artists'][0]['name']
+        artist = re.sub(r'[^\x00-\x7f]', "", artist)
+        album = cur['item']['album']['name']
+        print('Now playing: ' + album + ' by ' + artist) 
+        sleep(.5)
+    else:
+        servo.throttle = 1
+        sleep(0.25)
+        print('No album on this tag: ' + str(id))
