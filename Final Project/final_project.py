@@ -22,6 +22,7 @@ servo.set_pulse_width_range(10, 0)
 """My credentials for spotify go here, for privacy reasons I removed them for github"""
 
 
+
 # Spotify Authentication
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
                                                 client_secret=CLIENT_SECRET,
@@ -58,6 +59,7 @@ while True:
             print('No album on this tag: ' + str(id))
         
     except KeyboardInterrupt:
+        sp.pause_playback(device_id=DEVICE_ID)
         servo.throttle = 1
         sleep(0.5)
         break
