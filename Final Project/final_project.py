@@ -21,33 +21,38 @@ servo.set_pulse_width_range(10, 0)
 # spotify credentials
 """My credentials for spotify go here, for privacy reasons I removed them for github"""
 
-# Spotify Authentication
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
-                                                client_secret=CLIENT_SECRET,
-                                                redirect_uri="http://localhost:8080",
-                                                scope="user-read-playback-state,user-modify-playback-state"))
+
+
 
 reader=SimpleMFRC522()
 sp.shuffle(False, device_id=DEVICE_ID)
+prev = None
         
 # infinite loop waiting for RFID scan
 while True:
-    id= reader.read()[0]
-    status = album_list.get_album(id)
-    sleep(.5)
-    print(bool(status))
-    if status:
-        servo.throttle = 0
-        sleep(0.25)
-        sp.start_playback(device_id=DEVICE_ID, context_uri=status)
+    try:
+        id= reader.read()[0]
+        status = album_list.get_album(id)
         sleep(.5)
-        cur = sp.current_playback()
-        artist = cur['item']['artists'][0]['name']
-        artist = re.sub(r'[^\x00-\x7f]', "", artist)
-        album = cur['item']['album']['name']
-        print('Now playing: ' + album + ' by ' + artist) 
-        sleep(.5)
-    else:
+        print(bool(status))
+        if status:
+            print(sp.album(status))
+            sleep(0.25)
+            sp.start_playback(device_id=DEVICE_ID, context_uri=status)
+            sleep(.5)
+            cur = sp.current_playback()
+            artist = cur['item']['artists'][0]['name']
+            artist = re.sub(r'[^\x00-\x7f]', "", artist)
+            album = cur['item']['album']['name']
+            print('Now playing: ' + album + ' by ' + artist) 
+            sleep(.5)
+            servo.throttle = 0
+        else:
+            servo.throttle = 1
+            sleep(0.25)
+            print('No album on this tag: ' + str(id))
+        
+    except KeyboardInterrupt:
         servo.throttle = 1
-        sleep(0.25)
-        print('No album on this tag: ' + str(id))
+        sleep(0.5)
+        break
