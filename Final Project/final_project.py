@@ -22,11 +22,16 @@ servo.set_pulse_width_range(10, 0)
 """My credentials for spotify go here, for privacy reasons I removed them for github"""
 
 
-
+# Spotify Authentication
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
+                                                client_secret=CLIENT_SECRET,
+                                                redirect_uri="http://localhost:8080",
+                                                scope="user-read-playback-state,user-modify-playback-state"))
 
 reader=SimpleMFRC522()
 sp.shuffle(False, device_id=DEVICE_ID)
-prev = None
+
+servo.throttle = 0
         
 # infinite loop waiting for RFID scan
 while True:
@@ -34,10 +39,12 @@ while True:
         id= reader.read()[0]
         status = album_list.get_album(id)
         sleep(.5)
-        print(bool(status))
-        if status:
-            print(sp.album(status))
-            sleep(0.25)
+        cur_album_uri = sp.current_playback()['item']['album']['uri']
+        is_playing = sp.current_playback()['is_playing']
+        if is_playing and cur_album_uri == status:
+            pass
+        elif status and cur_album_uri != status:
+            sleep(.1)
             sp.start_playback(device_id=DEVICE_ID, context_uri=status)
             sleep(.5)
             cur = sp.current_playback()
@@ -46,9 +53,7 @@ while True:
             album = cur['item']['album']['name']
             print('Now playing: ' + album + ' by ' + artist) 
             sleep(.5)
-            servo.throttle = 0
         else:
-            servo.throttle = 1
             sleep(0.25)
             print('No album on this tag: ' + str(id))
         
