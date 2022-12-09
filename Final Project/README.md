@@ -23,8 +23,14 @@ Traditional record players are very large in addition to the fact that collectin
     * We used [Fielect Dupont Jumper Wires](https://www.amazon.com/dp/B081N3G8NT?psc=1&ref=ppx_yo2ov_dt_b_product_details)
 * Some type of small speaker
     * We used a [JBL Clip 4](https://www.amazon.com/JBL-Portable-Waterproof-Wireless-Bluetooth/dp/B09F86FDKH/ref=sr_1_4?keywords=jbl+clip+4&qid=1670614265&sr=8-4&ufe=app_do%3Aamzn1.fos.006c50ae-5d4c-4777-9bc0-4513d670b6bc) but any small form factor speaker will work
+* A lot of cardboard
+* Access to a printer (for the records)
+* Ideally have access to a laser cutter and 3D-Printer for the device box and turn-table needle
+* A spotify premium account
+* A computer with internet access
 
 ## Device Setup
+
 ### The Record Player
 
 ### The "Vinyl" Albums
@@ -34,5 +40,4 @@ Traditional record players are very large in addition to the fact that collectin
 ## Photos of Final Product
 
 ## Demo
-
-[Demo of the final product](https://drive.google.com/file/d/1ig4TU619wcOCq1zb0Q1GQWbqr0qE-_FR/view?usp=sharing)
+[<img src="final_product.png" width="80%">](https://drive.google.com/file/d/1ig4TU619wcOCq1zb0Q1GQWbqr0qE-_FR/view?usp=sharing)
