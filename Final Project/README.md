@@ -62,17 +62,36 @@ Since our speaker connects via bluetooth to the Rpi we are all finished with the
 
 ### The Code
 
-All of the code can be found in [final_project.py](https://github.com/jiovine/Interactive-Lab-Hub/blob/Fall2022/Final) with comments, so I will only be going over how to play Spotify songs out of the Rpi using Raspotify, and how to control Spotify remotely using Spotipy.
+All of the code can be found in [final_project.py](<https://github.com/jiovine/Interactive-Lab-Hub/blob/240beadf2fb6a776977c249159a5d22ccb53848c/Final Project/final_project.py>) with comments, so I will only be going over how to play Spotify songs out of the Rpi using Raspotify, and how to control Spotify remotely using Spotipy.
 
 I followed [this Raspotify tutorial](https://pimylifeup.com/raspberry-pi-spotify/) along with [this Spotipy tutorial](https://medium.com/@maxtingle/getting-started-with-spotifys-api-spotipy-197c3dc6353b) to get the two packages up and running and working together on my Rpi.
 
-Spotipy has [extensive documentation](https://spotipy.readthedocs.io/en/2.21.0/) to basically do anything with spotify from within a python script
+After setting up Raspotify and Spotipy we can retrieve the Device ID of the Rpi from the Spotify for Developers page that was used during the Spotipy setup. Using this device ID we can now force play songs for the Rpi!
+
+Two things that I would like to highlight in the code: the spotify authentication and how to make the RFID tag ID's play the correct albums.
+
+The spotify authentication:
+```python
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
+                    client_id=CLIENT_ID,
+                    client_secret=CLIENT_SECRET,
+                    redirect_uri="http://localhost:8080",
+                    scope="user-read-playback-state,user-modify-playback-state"))
+```
+Creating this instance of a Spotipy class allows you to interact with the Spotify Web API with any of the methods found in the extensive [Spotipy documentation](https://spotipy.readthedocs.io/en/2.21.0/) to basically do anything with spotify from within a python script.
+
+In addition to the [final_project.py](<https://github.com/jiovine/Interactive-Lab-Hub/blob/240beadf2fb6a776977c249159a5d22ccb53848c/Final Project/final_project.py>) file, I created an additional file [album_list.py](https://github.com/jiovine/Interactive-Lab-Hub/blob/Fall2022/Final%20Project/album_list.py) that stores the RFID tags as keys in a dictionary, with their corresponding value being a spotify album URI that we can then use:
+```python
+sp.start_playback(device_id=DEVICE_ID, context_uri=status)
+```
+to start playing the album, where ```status``` is the corresponding URI for the album that is scanned that is retrieved from a getter function inside [album_list.py](https://github.com/jiovine/Interactive-Lab-Hub/blob/Fall2022/Final%20Project/album_list.py).
 
 ## Design
 
 ### The Record Player
 * Thoughts behind the design
 * Where we got the design from
+    * Maybe a screenshot of the box template
 * How we laser cut and assembled
 * 3D printing the needle
 
