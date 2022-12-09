@@ -1,47 +1,38 @@
-# Final Project
+# Digital Vinyl Player
 
-Using the tools and techniques you learned in this class, design, prototype and test an interactive device.
+## Team Members
+ Joseph Iovine (jai47)
 
-Project plan - November 15
+ Carlos Ponce (cmp279)
 
-Peer feedback on Project plans: November 17
+## Idea and Inspiration
+Traditional record players are very large in addition to the fact that collecting records becomes a pretty expensive hobby. However, lets be honest a large portion of the reason people get into this hobby is not because of the love for vinyl records, but rather the aesthetic of being able to go through a collection of physical albums and watch your music come to life on the turn-table. Our solution to this is to create a “digital vinyl player” that uses RFID technology along with a Raspberry Pi and spotipy to play physical albums from spotify. The device will mimic a turntable by using a servo motor where the motor will start to spin when it detects an album on top of it, and the RFID scanner will read the album and start to play it from spotify. The user will still get the enjoyment of the aesthetic of physical albums in a much smaller and cheaper form factor.
 
-Functional check-off - November 29 & December 1
+![Final Project Sketch](iddfinal.jpeg)
 
-Final Project Presentations - December 6
+## What You'll Need
+* Rasperry Pi
+* Continuous Servo Motor
+    * We used a [SpringRC SM-S4303R](https://www.pololu.com/product/1248) continuous rotation servo
+* RFID Scanner
+    * We used a [Mifare RC522 RF IC Card Sensor Module](https://www.amazon.com/dp/B07VLDSYRW?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+    * *Note: This will require soldering*
+* RFID Tags
+    * Can purchase 50 [YARONGTECH RFID](https://www.amazon.com/dp/B01LZYOR7P?psc=1&ref=ppx_yo2ov_dt_b_product_details) sticker tags here
+* Female to female jumper wires
+    * We used [Fielect Dupont Jumper Wires](https://www.amazon.com/dp/B081N3G8NT?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+* Some type of small speaker
+    * We used a [JBL Clip 4](https://www.amazon.com/JBL-Portable-Waterproof-Wireless-Bluetooth/dp/B09F86FDKH/ref=sr_1_4?keywords=jbl+clip+4&qid=1670614265&sr=8-4&ufe=app_do%3Aamzn1.fos.006c50ae-5d4c-4777-9bc0-4513d670b6bc) but any small form factor speaker will work
 
-Write-up and documentation due - December 12
+## Device Setup
+### The Record Player
 
-## Objective
+### The "Vinyl" Albums
 
-The goal of this final project is for you to have a fully functioning and well-designed interactive device of your own design.
- 
-## Description
-Your project is to design and build an interactive device to suit a specific application of your choosing, and test the interaction with people. 
+## The Code
 
-## Deliverables
+## Photos of Final Product
 
-1. Project plan: Big idea, timeline, parts needed, fall-back plan.
+## Demo
 
-2. Functioning project: The finished project should be a device, system, interface, etc. that people can interact with.
-
-3. Documentation of design process
-4. Archive of all code, design patterns, etc. used in the final design. (As with labs, the standard should be that the documentation would allow you to recreate your project if you woke up with amnesia.)
-5. Video of someone using your project
-6. Reflections on process (What have you learned or wish you knew at the start?)
-
-7. Group work distribution questionnaire
-
-## Change of Design
-
-It is fine to change your project goals, but please resubmit the project plan for the new design when you do that.
-
-
-## Teams
-
-You can and are not required to work in teams. Be clear in documentation who contributed what. The total project contributions should reflect the number of people on the project.
-
-## Examples
-
-[Here is a list of good final projects from previous classes.](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/wiki/Previous-Final-Projects)
-This version of the class is very different, but it may be useful to see these.
+[Demo of the final product](https://drive.google.com/file/d/1ig4TU619wcOCq1zb0Q1GQWbqr0qE-_FR/view?usp=sharing)
