@@ -66,7 +66,7 @@ All of the code can be found in [final_project.py](https://github.com/jiovine/In
 
 I followed [this Raspotify tutorial](https://pimylifeup.com/raspberry-pi-spotify/) along with [this Spotipy tutorial](https://medium.com/@maxtingle/getting-started-with-spotifys-api-spotipy-197c3dc6353b) to get the two packages up and running and working together on my Rpi.
 
-Spotipy has [extensive documentation](https://spotipy.readthedocs.io/en/2.21.0/) to basically do anything with spotify from within a python script.
+Spotipy has [extensive documentation](https://spotipy.readthedocs.io/en/2.21.0/) to basically do anything with spotify from within a python script
 
 ## Design
 
@@ -74,6 +74,7 @@ Spotipy has [extensive documentation](https://spotipy.readthedocs.io/en/2.21.0/)
 * Thoughts behind the design
 * Where we got the design from
 * How we laser cut and assembled
+* 3D printing the needle
 
 ### The "Vinyl" Records
 * How we made the records
@@ -81,4 +82,6 @@ Spotipy has [extensive documentation](https://spotipy.readthedocs.io/en/2.21.0/)
 ## Photos of Final Product
 
 ## Demo
+Demo of the final product.
+
 [<img src="final_product.png" width="80%">](https://drive.google.com/file/d/1ig4TU619wcOCq1zb0Q1GQWbqr0qE-_FR/view?usp=sharing)
