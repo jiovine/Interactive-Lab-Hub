@@ -7,15 +7,12 @@ import re
 import album_list
 from adafruit_servokit import ServoKit
 
-# Set channels to the number of servo channels on your kit.
-# There are 16 channels on the PCA9685 chip.
+# Set channels to the number of servo channels on your kit
 kit = ServoKit(channels=16)
 
-# Name and set up the servo according to the channel you are using.
+# Name and set up the servo to channel 0
 servo = kit.continuous_servo[0]
-
-# Set the pulse width range of your servo for PWM control of rotating 0-180 degree (min_pulse, max_pulse)
-# Each servo might be different, you can normally find this information in the servo datasheet
+# set pulse with range of servo
 servo.set_pulse_width_range(10, 0)
 
 # spotify credentials
@@ -29,17 +26,23 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
                                                 redirect_uri="http://localhost:8080",
                                                 scope="user-read-playback-state,user-modify-playback-state"))
 
+# create reader
 reader=SimpleMFRC522()
+# make sure the album isn't on shuffle to mimic a record player
 sp.shuffle(False, device_id=DEVICE_ID)
-
+# start the turn-table
 servo.throttle = 0
         
 # infinite loop waiting for RFID scan
 while True:
     try:
+        # Get tag ID from RFID scanner and convert to Spotify URI
         id= reader.read()[0]
         status = album_list.get_album(id)
         sleep(.5)
+        # Checks if a song is currently playing
+        # if it is and is the same album as what is scanned we do nothing
+        # if it is a new album we start playing the new one
         cur_album_uri = sp.current_playback()['item']['album']['uri']
         is_playing = sp.current_playback()['is_playing']
         if is_playing and cur_album_uri == status:
@@ -54,10 +57,12 @@ while True:
             album = cur['item']['album']['name']
             print('Now playing: ' + album + ' by ' + artist) 
             sleep(.5)
+        # if the tag scanned does not have an album linked to it
         else:
             sleep(0.25)
             print('No album on this tag: ' + str(id))
-        
+    
+    # Stop the motor and playback when interrupting the script
     except KeyboardInterrupt:
         sp.pause_playback(device_id=DEVICE_ID)
         servo.throttle = 1
