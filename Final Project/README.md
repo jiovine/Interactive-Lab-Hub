@@ -8,7 +8,7 @@
 ## Idea and Inspiration
 Traditional record players are very large in addition to the fact that collecting records becomes a pretty expensive hobby. However, lets be honest a large portion of the reason people get into this hobby is not because of the love for vinyl records, but rather the aesthetic of being able to go through a collection of physical albums and watch your music come to life on the turn-table. Our solution to this is to create a “digital vinyl player” that uses RFID technology along with a Raspberry Pi and spotipy to play physical albums from spotify. The device will mimic a turntable by using a servo motor where the motor will start to spin when it detects an album on top of it, and the RFID scanner will read the album and start to play it from spotify. The user will still get the enjoyment of the aesthetic of physical albums in a much smaller and cheaper form factor.
 
-<center><img src="iddfinal.jpeg" width="90%"></center>
+<center><img src="images/iddfinal.jpeg" width="90%"></center>
 
 ## What You'll Need
 * Rasperry Pi
@@ -54,7 +54,7 @@ Now for the continuous servo motor, we use the Qwiic connect to female jumper ca
 * 3.3V connects to Pin 1
 * GND connects to Pin 6
 
-<center><img src="rpi_pinout.png" width="80%"></center>
+<center><img src="images/rpi_pinout.png" width="80%"></center>
 
 Lastly connect the SpringRC SM-S4303R continuous servo motor to channel 0 of the Zio 16 controller along with the 3xAA battery pack to JST power connector on the controller.
 
@@ -88,19 +88,35 @@ to start playing the album, where ```status``` is the corresponding URI for the 
 
 ## Design
 
-### The Record Player
-* Thoughts behind the design
-* Where we got the design from
-    * Maybe a screenshot of the box template
-* How we laser cut and assembled
-* 3D printing the needle
+### The Record Player and the "Vinyl" Records
+Because our idea was a record player we always knew we wanted a rectangular shape for our design. We wanted to imitate the design of larger record players. The size of our design came from the box of components we received at the beginning of the semester. We realized it perfectly fit everything we just needed to figure out the correct layout. Once we saw everything fit we measured the box and used [this link](https://www.festi.info/boxes.py/HingeBox?language=en) to cut out a box with hinges. The box would look like this:
 
-### The "Vinyl" Records
-* How we made the records
+<center><img src="images/box_design.png" width="60%"></center>
+
+And using the following template we were able to laser cut the pieces:
+
+<center><img src="images/box_template.png" width="60%"></center>
+
+With the box built we refit our inside to measure the hole for our motor. We had forgotten about this element and luckily because we went with a hinge we just had to open it and place it in the laser cuter. We cut a 4 inch hole on the top. We were not happy with the opening and had to cut a bit more. The ugly shape we had on the top of our box would be covered so it was not a reason to start over. 
+
+<center><img src="images/finished_cut.jpg" width="60%"></center>
+
+We then began cutting our "Vinyl Records.” We cut 4 inch circles with a hole in the middle that we would use as records. One of these circles would be the base and taped onto the servo motor. Our records had an rfid sticker on once side and the album art cover on the other. We really loved this idea since it was obvious which record was which.
+
+<center><img src="images/under_records.png" width="60%"></center>
+
+With that our record player was done! We figured that with the extra time we had we could add some extra flair. We decided to 3D print a record player needle. We found a design we liked online and threw it into the printer. It wouldn’t have functionality but in the future we wanted to use the needle to play and pause songs. Adding some paint and attaching the needle:
+
+<center><img src="images/finished_product.png" width="60%"></center>
 
 ## Photos of Final Product
+
+<center><img src="images/records_and_player.png" width="100%"></center>
+
+
+<center><img src="images/records.png" width="100%"></center>
 
 ## Demo
 Demo of the final product.
 
-[<img src="final_product.png" width="80%">](https://drive.google.com/file/d/1ig4TU619wcOCq1zb0Q1GQWbqr0qE-_FR/view?usp=sharing)
+[<img src="images/video_thumbnail.png" width="80%">](https://drive.google.com/file/d/1ig4TU619wcOCq1zb0Q1GQWbqr0qE-_FR/view?usp=sharing)
