@@ -9,6 +9,7 @@
 Traditional record players are very large in addition to the fact that collecting records becomes a pretty expensive hobby. However, lets be honest a large portion of the reason people get into this hobby is not because of the love for vinyl records, but rather the aesthetic of being able to go through a collection of physical albums and watch your music come to life on the turn-table. Our solution to this is to create a “digital vinyl player” that uses RFID technology along with a Raspberry Pi and spotipy to play physical albums from spotify. The device will mimic a turntable by using a servo motor where the motor will start to spin when it detects an album on top of it, and the RFID scanner will read the album and start to play it from spotify. The user will still get the enjoyment of the aesthetic of physical albums in a much smaller and cheaper form factor.
 
 <center><img src="images/iddfinal.jpeg" width="90%"></center>
+<center><img src="images/verplank.png" width="90%"></center>
 
 ## What You'll Need
 * Rasperry Pi
@@ -66,7 +67,7 @@ All of the code can be found in [final_project.py](<https://github.com/jiovine/I
 
 I followed [this Raspotify tutorial](https://pimylifeup.com/raspberry-pi-spotify/) along with [this Spotipy tutorial](https://medium.com/@maxtingle/getting-started-with-spotifys-api-spotipy-197c3dc6353b) to get the two packages up and running and working together on my Rpi.
 
-After setting up Raspotify and Spotipy we can retrieve the Device ID of the Rpi from the Spotify for Developers page that was used during the Spotipy setup. Using this device ID we can now force play songs for the Rpi!
+After setting up Raspotify and Spotipy we can retrieve the Device ID of the Rpi from the Spotify for Developers page that was used during the Spotipy setup. Using this device ID we can now force play songs from the Rpi!
 
 Two things that I would like to highlight in the code: the spotify authentication and how to make the RFID tag ID's play the correct albums.
 
@@ -84,7 +85,7 @@ In addition to the [final_project.py](<https://github.com/jiovine/Interactive-La
 ```python
 sp.start_playback(device_id=DEVICE_ID, context_uri=status)
 ```
-to start playing the album, where ```status``` is the corresponding URI for the album that is scanned that is retrieved from a getter function inside [album_list.py](https://github.com/jiovine/Interactive-Lab-Hub/blob/Fall2022/Final%20Project/album_list.py).
+to start playing the album, where ```status``` is the corresponding URI for the album that is scanned and is retrieved from a getter function inside [album_list.py](https://github.com/jiovine/Interactive-Lab-Hub/blob/Fall2022/Final%20Project/album_list.py).
 
 ## Design
 
@@ -109,6 +110,12 @@ With that our record player was done! We figured that with the extra time we had
 
 <center><img src="images/finished_product.png" width="60%"></center>
 
+## Internals
+
+Inside our finished box design we were able to fit all the components very easily and only had to worry about the positioning of the RFID scanner inside of the box. We chose to place it under the left side of the turn-table but had two concerns: will it be able scan through the cardboard from about 1.5 inches away, and how would the user know how to "correctly" place the record onto the turn-table (since the RFID tags were only in one spot on the records). The first concern was alleviated during testing since the RFID scanner did a very good job on reading through cardboard. As for the second concern, we decided to allow the servo to continuously rotate since it gave the user the ability to place the record on in any orientation. Since the motor is always running, eventually the tag will pass over the RFID scanner and play the corresponding album.
+
+<center><img src="images/internals.png" width="60%"></center>
+
 ## Photos of Final Product
 
 <center><img src="images/records_and_player.png" width="100%"></center>
@@ -119,4 +126,4 @@ With that our record player was done! We figured that with the extra time we had
 ## Demo
 Demo of the final product.
 
-[<img src="images/video_thumbnail.png" width="80%">](https://drive.google.com/file/d/1ig4TU619wcOCq1zb0Q1GQWbqr0qE-_FR/view?usp=sharing)
+[<img src="images/video_thumbnail_1.png" width="80%">](https://drive.google.com/file/d/1aZlFwZeGD1GsZawRl8VL8va01FeMVpWV/view?usp=sharing)
