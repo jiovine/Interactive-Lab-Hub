@@ -5,6 +5,11 @@
 
  Carlos Ponce (cmp279)
 
+## Demo
+Demo of the final product.
+
+[<img src="images/video_thumbnail_1.png" width="80%">](https://drive.google.com/file/d/1aZlFwZeGD1GsZawRl8VL8va01FeMVpWV/view?usp=sharing)
+
 ## Idea and Inspiration
 Traditional record players are very large in addition to the fact that collecting records becomes a pretty expensive hobby. However, lets be honest a large portion of the reason people get into this hobby is not because of the love for vinyl records, but rather the aesthetic of being able to go through a collection of physical albums and watch your music come to life on the turn-table. Our solution to this is to create a “digital vinyl player” that uses RFID technology along with a Raspberry Pi and spotipy to play physical albums from spotify. The device will mimic a turntable by using a servo motor where the motor will start to spin when it detects an album on top of it, and the RFID scanner will read the album and start to play it from spotify. The user will still get the enjoyment of the aesthetic of physical albums in a much smaller and cheaper form factor.
 
@@ -122,8 +127,3 @@ Inside our finished box design we were able to fit all the components very easil
 
 
 <center><img src="images/records.png" width="100%"></center>
-
-## Demo
-Demo of the final product.
-
-[<img src="images/video_thumbnail_1.png" width="80%">](https://drive.google.com/file/d/1aZlFwZeGD1GsZawRl8VL8va01FeMVpWV/view?usp=sharing)
